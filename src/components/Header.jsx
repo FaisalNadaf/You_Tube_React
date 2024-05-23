@@ -2,11 +2,12 @@ import React from "react";
 import { HAMBURGER, PROFILE, YOU_TUBE_LOGO } from "../constant";
 import { useDispatch } from "react-redux";
 import { toggleMenu } from "../redux/Slice's/appSlice";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const dispatch = useDispatch();
   return (
-    <div className="h-14 w-screen shadow-lg border flex items-center justify-between px-4 ">
+    <div className="h-16  shadow-lg border flex items-center justify-between px-4 sticky top-0 bg-white ">
       <div className="flex">
         <img
           className="h-6 mx-2"
@@ -16,7 +17,9 @@ const Header = () => {
             dispatch(toggleMenu());
           }}
         />
-        <img className="h-8 mx-2" src={YOU_TUBE_LOGO} alt="hamburger" />
+        <a href="/">
+          <img className="h-8 mx-2" src={YOU_TUBE_LOGO} alt="logo" />
+        </a>
       </div>
       <div className="w-1/2">
         <input
