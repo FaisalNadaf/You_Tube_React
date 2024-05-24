@@ -9,3 +9,6 @@ export const PROFILE =
 
 export const YOU_TUBE_API =
   "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=AIzaSyDXrp_pAlDoaxI49ZP8kSoaw6Y5dYo1C3s";
+
+export const SEARCH_QUERY_API =
+  "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";

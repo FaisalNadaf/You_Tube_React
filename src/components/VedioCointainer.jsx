@@ -25,8 +25,8 @@ const VedioCointainer = () => {
       <div className="flex flex-wrap items-center justify-center">
         {vedio.map((singleVedio) => {
           return (
-            <Link to={`/watch/${singleVedio.id}`}>
-              <VedioCard key={singleVedio.id} {...singleVedio} />
+            <Link to={`/watch/${singleVedio.id}`} key={singleVedio.id}>
+              <VedioCard {...singleVedio} />
             </Link>
           );
         })}
