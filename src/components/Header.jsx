@@ -5,35 +5,60 @@ import {
   SEARCH_QUERY_API,
   YOU_TUBE_LOGO,
 } from "../constant";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../redux/Slice's/appSlice";
+import { storeCache } from "../redux/Slice's/searchSlice";
 
 const Header = () => {
   const dispatch = useDispatch();
   const [searchQuery, setSearchQuery] = useState("");
   const [fetchQuert, setFetchQuert] = useState([]);
   const [showSuggestion, setShowSuggestion] = useState(false);
+  const hideMenu = useSelector((store) => store.app.toggle);
+  const cacheStore = useSelector((store) => store.cache);
+  // console.log(cacheStore[searchQuery]);
 
   const searchSuggestion = async () => {
     const data = await fetch(SEARCH_QUERY_API + searchQuery);
     const jsonData = await data.json();
     setFetchQuert(jsonData[1]);
+    dispatch(
+      storeCache({
+        [searchQuery]: jsonData[1],
+      })
+    );
   };
   useEffect(() => {
-    searchSuggestion();
+    const timmer = setTimeout(() => {
+      if (cacheStore[searchQuery]) {
+        searchSuggestion(cache[searchQuery]);
+      } else {
+        searchSuggestion();
+      }
+    }, 200);
+    return () => {
+      clearTimeout(timmer);
+    };
   }, [searchQuery]);
   return (
     <div className="flex flex-col">
       <div className="h-16   shadow-lg border flex items-center justify-between px-4 sticky top-0 bg-white ">
         <div className="flex">
-          <img
-            className="h-6 mx-2"
-            src={HAMBURGER}
-            alt="hamburger"
-            onClick={() => {
-              dispatch(toggleMenu());
-            }}
-          />
+          {!hideMenu ? (
+            <i
+              className="fa-solid fa-bars"
+              onClick={() => {
+                dispatch(toggleMenu());
+              }}
+            ></i>
+          ) : (
+            <i
+              className="fa-solid fa-xmark"
+              onClick={() => {
+                dispatch(toggleMenu());
+              }}
+            ></i>
+          )}{" "}
           <a href="/">
             <img className="h-8 mx-2" src={YOU_TUBE_LOGO} alt="logo" />
           </a>
@@ -53,7 +78,7 @@ const Header = () => {
           <button className="rounded-r-full border border-black px-4 py-1 bg-red-500  ">
             🔍
           </button>
-          {showSuggestion && (
+          {showSuggestion && searchQuery.length > 0 && (
             <div className="rounded-lg  shadow-lg self-center bg-white w-[37rem] absolute top-16 p-2">
               <ul>
                 {fetchQuert.map((ele) => {
