@@ -41,24 +41,24 @@ const Header = () => {
     };
   }, [searchQuery]);
   return (
-    <div className="flex flex-col">
-      <div className="h-16   shadow-lg border flex items-center justify-between px-4 sticky top-0 bg-white ">
-        <div className="flex">
+    <div className="flex flex-col sticky top-0">
+      <div className="h-16   shadow-lg border flex items-center justify-between px-4  bg-white ">
+        <div className="flex items-center justify-between px-4 w-48">
           {!hideMenu ? (
             <i
-              className="fa-solid fa-bars"
+              className="text-2xl  fa-solid fa-bars"
               onClick={() => {
                 dispatch(toggleMenu());
               }}
             ></i>
           ) : (
             <i
-              className="fa-solid fa-xmark"
+              className="text-2xl  fa-solid fa-xmark"
               onClick={() => {
                 dispatch(toggleMenu());
               }}
             ></i>
-          )}{" "}
+          )}
           <a href="/">
             <img className="h-8 mx-2" src={YOU_TUBE_LOGO} alt="logo" />
           </a>
