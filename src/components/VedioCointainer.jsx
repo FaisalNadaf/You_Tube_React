@@ -3,6 +3,7 @@ import ButtonCointainer from "./ButtonCointainer";
 import VedioCard from "./VedioCard";
 import { YOU_TUBE_API } from "../constant";
 import { Link } from "react-router-dom";
+import ShimmerUi from "./ShimmerUi";
 
 const VedioCointainer = () => {
   const [vedio, setVedio] = useState([]);
@@ -15,10 +16,9 @@ const VedioCointainer = () => {
   useEffect(() => {
     vedios();
   }, []);
-
-  if (vedio.length <= 0) return null;
-
-  return (
+  return vedio.length <= 0 ? (
+    <ShimmerUi />
+  ) : (
     <div className=" w-full ">
       <ButtonCointainer />
 
