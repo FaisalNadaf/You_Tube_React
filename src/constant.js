@@ -12,3 +12,419 @@ export const YOU_TUBE_API =
 
 export const SEARCH_QUERY_API =
   "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
+
+export const MOCK_COMMENTS = [
+  {
+    name: "faisal",
+    text: "faisal is good boy good decveloperr",
+    replies: [],
+  },
+  {
+    name: "faisal",
+    text: "faisal is good boy good decveloperr",
+    replies: [],
+  },
+  {
+    name: "faisal",
+    text: "faisal is good boy good decveloperr",
+    replies: [],
+  },
+  {
+    name: "faisal",
+    text: "faisal is good boy good decveloperr",
+    replies: [
+      {
+        name: "faisal",
+        text: "faisal is good boy good decveloperr",
+        replies: [],
+      },
+    ],
+  },
+  {
+    name: "faisal",
+    text: "faisal is good boy good decveloperr",
+    replies: [
+      {
+        name: "faisal",
+        text: "faisal is good boy good decveloperr",
+        replies: [
+          {
+            name: "faisal",
+            text: "faisal is good boy good decveloperr",
+            replies: [
+              {
+                name: "faisal",
+                text: "faisal is good boy good decveloperr",
+                replies: [
+                  {
+                    name: "faisal",
+                    text: "faisal is good boy good decveloperr",
+                    replies: [
+                      {
+                        name: "faisal",
+                        text: "faisal is good boy good decveloperr",
+                        replies: [
+                          {
+                            name: "faisal",
+                            text: "faisal is good boy good decveloperr",
+                            replies: [
+                              {
+                                name: "faisal",
+                                text: "faisal is good boy good decveloperr",
+                                replies: [
+                                  {
+                                    name: "faisal",
+                                    text: "faisal is good boy good decveloperr",
+                                    replies: [
+                                      {
+                                        name: "faisal",
+                                        text: "faisal is good boy good decveloperr",
+                                        replies: [],
+                                      },
+                                      {
+                                        name: "faisal",
+                                        text: "faisal is good boy good decveloperr",
+                                        replies: [],
+                                      },
+                                      {
+                                        name: "faisal",
+                                        text: "faisal is good boy good decveloperr",
+                                        replies: [],
+                                      },
+                                      {
+                                        name: "faisal",
+                                        text: "faisal is good boy good decveloperr",
+                                        replies: [],
+                                      },
+                                    ],
+                                  },
+                                  {
+                                    name: "faisal",
+                                    text: "faisal is good boy good decveloperr",
+                                    replies: [
+                                      {
+                                        name: "faisal",
+                                        text: "faisal is good boy good decveloperr",
+                                        replies: [],
+                                      },
+                                      {
+                                        name: "faisal",
+                                        text: "faisal is good boy good decveloperr",
+                                        replies: [
+                                          {
+                                            name: "faisal",
+                                            text: "faisal is good boy good decveloperr",
+                                            replies: [],
+                                          },
+                                          {
+                                            name: "faisal",
+                                            text: "faisal is good boy good decveloperr",
+                                            replies: [
+                                              {
+                                                name: "faisal",
+                                                text: "faisal is good boy good decveloperr",
+                                                replies: [],
+                                              },
+                                              {
+                                                name: "faisal",
+                                                text: "faisal is good boy good decveloperr",
+                                                replies: [],
+                                              },
+                                              {
+                                                name: "faisal",
+                                                text: "faisal is good boy good decveloperr",
+                                                replies: [
+                                                  {
+                                                    name: "faisal",
+                                                    text: "faisal is good boy good decveloperr",
+                                                    replies: [],
+                                                  },
+                                                  {
+                                                    name: "faisal",
+                                                    text: "faisal is good boy good decveloperr",
+                                                    replies: [
+                                                      {
+                                                        name: "faisal",
+                                                        text: "faisal is good boy good decveloperr",
+                                                        replies: [
+                                                          {
+                                                            name: "faisal",
+                                                            text: "faisal is good boy good decveloperr",
+                                                            replies: [],
+                                                          },
+                                                          {
+                                                            name: "faisal",
+                                                            text: "faisal is good boy good decveloperr",
+                                                            replies: [],
+                                                          },
+                                                          {
+                                                            name: "faisal",
+                                                            text: "faisal is good boy good decveloperr",
+                                                            replies: [],
+                                                          },
+                                                        ],
+                                                      },
+                                                      {
+                                                        name: "faisal",
+                                                        text: "faisal is good boy good decveloperr",
+                                                        replies: [],
+                                                      },
+                                                      {
+                                                        name: "faisal",
+                                                        text: "faisal is good boy good decveloperr",
+                                                        replies: [],
+                                                      },
+                                                    ],
+                                                  },
+                                                  {
+                                                    name: "faisal",
+                                                    text: "faisal is good boy good decveloperr",
+                                                    replies: [],
+                                                  },
+                                                ],
+                                              },
+                                            ],
+                                          },
+                                          {
+                                            name: "faisal",
+                                            text: "faisal is good boy good decveloperr",
+                                            replies: [],
+                                          },
+                                        ],
+                                      },
+                                      {
+                                        name: "faisal",
+                                        text: "faisal is good boy good decveloperr",
+                                        replies: [],
+                                      },
+                                    ],
+                                  },
+                                  {
+                                    name: "faisal",
+                                    text: "faisal is good boy good decveloperr",
+                                    replies: [],
+                                  },
+                                ],
+                              },
+                              {
+                                name: "faisal",
+                                text: "faisal is good boy good decveloperr",
+                                replies: [],
+                              },
+                              {
+                                name: "faisal",
+                                text: "faisal is good boy good decveloperr",
+                                replies: [],
+                              },
+                            ],
+                          },
+                          {
+                            name: "faisal",
+                            text: "faisal is good boy good decveloperr",
+                            replies: [],
+                          },
+                          {
+                            name: "faisal",
+                            text: "faisal is good boy good decveloperr",
+                            replies: [],
+                          },
+                        ],
+                      },
+                      {
+                        name: "faisal",
+                        text: "faisal is good boy good decveloperr",
+                        replies: [],
+                      },
+                      {
+                        name: "faisal",
+                        text: "faisal is good boy good decveloperr",
+                        replies: [],
+                      },
+                    ],
+                  },
+                  {
+                    name: "faisal",
+                    text: "faisal is good boy good decveloperr",
+                    replies: [
+                      {
+                        name: "faisal",
+                        text: "faisal is good boy good decveloperr",
+                        replies: [],
+                      },
+                      {
+                        name: "faisal",
+                        text: "faisal is good boy good decveloperr",
+                        replies: [],
+                      },
+                      {
+                        name: "faisal",
+                        text: "faisal is good boy good decveloperr",
+                        replies: [],
+                      },
+                      {
+                        name: "faisal",
+                        text: "faisal is good boy good decveloperr",
+                        replies: [
+                          {
+                            name: "faisal",
+                            text: "faisal is good boy good decveloperr",
+                            replies: [],
+                          },
+                          {
+                            name: "faisal",
+                            text: "faisal is good boy good decveloperr",
+                            replies: [],
+                          },
+                          {
+                            name: "faisal",
+                            text: "faisal is good boy good decveloperr",
+                            replies: [],
+                          },
+                          {
+                            name: "faisal",
+                            text: "faisal is good boy good decveloperr",
+                            replies: [],
+                          },
+                          {
+                            name: "faisal",
+                            text: "faisal is good boy good decveloperr",
+                            replies: [
+                              {
+                                name: "faisal",
+                                text: "faisal is good boy good decveloperr",
+                                replies: [
+                                  {
+                                    name: "faisal",
+                                    text: "faisal is good boy good decveloperr",
+                                    replies: [
+                                      {
+                                        name: "faisal",
+                                        text: "faisal is good boy good decveloperr",
+                                        replies: [
+                                          {
+                                            name: "faisal",
+                                            text: "faisal is good boy good decveloperr",
+                                            replies: [
+                                              {
+                                                name: "faisal",
+                                                text: "faisal is good boy good decveloperr",
+                                                replies: [
+                                                  {
+                                                    name: "faisal",
+                                                    text: "faisal is good boy good decveloperr",
+                                                    replies: [
+                                                      {
+                                                        name: "faisal",
+                                                        text: "faisal is good boy good decveloperr",
+                                                        replies: [
+                                                          {
+                                                            name: "faisal",
+                                                            text: "faisal is good boy good decveloperr",
+                                                            replies: [],
+                                                          },
+                                                        ],
+                                                      },
+                                                    ],
+                                                  },
+                                                ],
+                                              },
+                                            ],
+                                          },
+                                        ],
+                                      },
+                                    ],
+                                  },
+                                ],
+                              },
+                            ],
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                  {
+                    name: "faisal",
+                    text: "faisal is good boy good decveloperr",
+                    replies: [],
+                  },
+                ],
+              },
+              {
+                name: "faisal",
+                text: "faisal is good boy good decveloperr",
+                replies: [],
+              },
+              {
+                name: "faisal",
+                text: "faisal is good boy good decveloperr",
+                replies: [],
+              },
+            ],
+          },
+          {
+            name: "faisal",
+            text: "faisal is good boy good decveloperr",
+            replies: [],
+          },
+          {
+            name: "faisal",
+            text: "faisal is good boy good decveloperr",
+            replies: [],
+          },
+        ],
+      },
+      {
+        name: "faisal",
+        text: "faisal is good boy good decveloperr",
+        replies: [],
+      },
+    ],
+  },
+  {
+    name: "faisal",
+    text: "faisal is good boy good decveloperr",
+    replies: [],
+  },
+  {
+    name: "faisal",
+    text: "faisal is good boy good decveloperr",
+    replies: [],
+  },
+  {
+    name: "faisal",
+    text: "faisal is good boy good decveloperr",
+    replies: [],
+  },
+  {
+    name: "faisal",
+    text: "faisal is good boy good decveloperr",
+    replies: [],
+  },
+  {
+    name: "faisal",
+    text: "faisal is good boy good decveloperr",
+    replies: [],
+  },
+  {
+    name: "faisal",
+    text: "faisal is good boy good decveloperr",
+    replies: [],
+  },
+  {
+    name: "faisal",
+    text: "faisal is good boy good decveloperr",
+    replies: [],
+  },
+];
+
+export const Colors = [
+  "#F2D7D5",
+  "#EBDEF0",
+  "#D4E6F1",
+  "#D1F2EB",
+  "#A9DFBF",
+  "#F9E79F",
+  "#F5CBA7",
+  "#D5DBDB",
+  "#AEB6BF",
+];

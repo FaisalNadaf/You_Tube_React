@@ -2,8 +2,8 @@ import React from "react";
 
 const ShimmerUi = () => {
   return (
-    <div className="flex flex-wrap m-4 p-2">
-      {Array(12)
+    <div className="flex flex-wrap mt-4 p-2">
+      {Array(20)
         .fill("")
         .map(() => {
           return (
