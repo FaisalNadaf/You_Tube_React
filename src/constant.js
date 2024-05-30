@@ -13,6 +13,9 @@ export const YOU_TUBE_API =
 export const SEARCH_QUERY_API =
   "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
 
+export const GET_VIDEO_BY_SEARCH_KEY =
+  "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=YOURKEYWORD&type=video&key=AIzaSyDXrp_pAlDoaxI49ZP8kSoaw6Y5dYo1C3s";
+
 export const MOCK_COMMENTS = [
   {
     name: "faisal",

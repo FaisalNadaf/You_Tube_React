@@ -7,8 +7,9 @@ const searchSlice = createSlice({
     storeCache: (state, action) => {
       state = Object.assign(state, action.payload);
     },
+ 
   },
 });
 
-export const { storeCache } = searchSlice.actions;
+export const { storeCache, storeSeach } = searchSlice.actions;
 export default searchSlice.reducer;

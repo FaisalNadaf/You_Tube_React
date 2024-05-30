@@ -7,7 +7,8 @@ import {
 } from "../constant";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../redux/Slice's/appSlice";
-import { storeCache } from "../redux/Slice's/searchSlice";
+import { storeCache, storeSeach } from "../redux/Slice's/searchSlice";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -40,6 +41,10 @@ const Header = () => {
       clearTimeout(timmer);
     };
   }, [searchQuery]);
+  const storeSearch = () => {
+    dispatch(storeSeach(searchQuery));
+  };
+
   return (
     <div className="flex flex-col sticky top-0">
       <div className="h-16   shadow-lg border flex items-center justify-between px-4  bg-white ">
@@ -75,9 +80,14 @@ const Header = () => {
             }}
             className="border w-4/5 center rounded-l-full py-1 border-black "
           />
-          <button className="rounded-r-full border border-black px-4 py-1 bg-red-500  ">
+          {/* <Link to={"/search"}> */}
+          <button
+            onClick={storeSearch()}
+            className="rounded-r-full border border-black px-4 py-1 bg-red-500  "
+          >
             🔍
           </button>
+          {/* </Link> */}
           {showSuggestion && searchQuery.length > 0 && (
             <div className="rounded-lg  shadow-lg self-center bg-white w-[37rem] absolute top-16 p-2">
               <ul>

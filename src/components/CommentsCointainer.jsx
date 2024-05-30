@@ -6,8 +6,6 @@ const CommentsCointainer = () => {
   const random_idx = () => {
     return Math.floor(Math.random() * Colors.length);
   };
-
-
   return (
     <div>
       {MOCK_COMMENTS.map((comment, idx) => {

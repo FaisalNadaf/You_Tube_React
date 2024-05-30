@@ -6,6 +6,7 @@ const store = configureStore({
   reducer: {
     app: appSlice,
     cache: searchSlice,
+    search: searchStore,
   },
 });
 

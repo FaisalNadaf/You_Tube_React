@@ -7,7 +7,6 @@ const Comment = ({ data }) => {
     <div className="flex items-center px-4 py-2 bg-gray-100 shadow rounded " >
       <img src={PROFILE} alt="" className="h-8 mx-4" />
       <div>
-       
         <div>{name}</div>
         <div>{text}</div>
       </div>
