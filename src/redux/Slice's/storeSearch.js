@@ -5,8 +5,7 @@ const searchStore = createSlice({
   initialState: "",
   reducers: {
     storeSeach: (state, action) => {
-      state = action.payload;
-      console.log(state);
+      return action.payload;
     },
   },
 });

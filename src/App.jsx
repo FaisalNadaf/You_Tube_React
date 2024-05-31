@@ -5,7 +5,6 @@ import store from "./redux/store";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import WatchVedio from "./components/WatchVedio";
 import VedioCointainer from "./components/VedioCointainer";
-import SearchVideosCointaien from "./components/SearchVideosCointaien";
 
 function App() {
   return (
@@ -26,10 +25,6 @@ const appRoute = createBrowserRouter([
       {
         path: "/",
         element: <VedioCointainer />,
-      },
-      {
-        path: "search",
-        element: <SearchVideosCointaien />,
       },
       {
         path: "watch/:id",

@@ -7,8 +7,9 @@ import {
 } from "../constant";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../redux/Slice's/appSlice";
-import { storeCache, storeSeach } from "../redux/Slice's/searchSlice";
+import { storeCache } from "../redux/Slice's/searchSlice";
 import { Link } from "react-router-dom";
+import { storeSeach } from "../redux/Slice's/storeSearch";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -80,13 +81,13 @@ const Header = () => {
             }}
             className="border w-4/5 center rounded-l-full py-1 border-black "
           />
-          {/* <Link to={"/search"}> */}
-          <button
-            onClick={storeSearch()}
-            className="rounded-r-full border border-black px-4 py-1 bg-red-500  "
-          >
-            🔍
-          </button>
+          {/* <Link to="/search"> */}
+            <button
+              onClick={storeSearch}
+              className="rounded-r-full border border-black px-4 py-1 bg-red-500  "
+            >
+              🔍
+            </button>
           {/* </Link> */}
           {showSuggestion && searchQuery.length > 0 && (
             <div className="rounded-lg  shadow-lg self-center bg-white w-[37rem] absolute top-16 p-2">
@@ -94,7 +95,6 @@ const Header = () => {
                 {fetchQuert.map((ele) => {
                   return (
                     <li className="py-1 hover:bg-gray-100 rounded" key={ele}>
-                      {" "}
                       🔍 {ele}
                     </li>
                   );
