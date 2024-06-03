@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import LiveChat from "./LiveChat";
 import { useDispatch, useSelector } from "react-redux";
 import { addMessage } from "../redux/Slice's/liveChatSlice";
+import generateName from "../helpers/generateName";
+import { randomText } from "../helpers/genrateMessaage,";
 
 const LiveChatCointainer = () => {
   const dispatch = useDispatch();
@@ -10,8 +12,8 @@ const LiveChatCointainer = () => {
     const timmer = setInterval(() => {
       dispatch(
         addMessage({
-          name: "fasialssss",
-          message: "asfdas",
+          name: generateName(),
+          message: randomText,
         })
       );
     }, 2000);
@@ -24,8 +26,7 @@ const LiveChatCointainer = () => {
   return (
     <div className="">
       {livechat.map((chat, idx) => (
-        <LiveChat 
-       key={idx} name={chat.name} message={chat.message} />
+        <LiveChat key={idx} name={chat.name} message={chat.message} />
       ))}
     </div>
   );

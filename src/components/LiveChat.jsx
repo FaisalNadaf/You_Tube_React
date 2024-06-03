@@ -1,5 +1,6 @@
 import React from "react";
 import { PROFILE } from "../constant";
+import genrateEmoji from "../helpers/genrateEmoji";
 
 const LiveChat = ({ name, message }) => {
   return (
@@ -9,7 +10,7 @@ const LiveChat = ({ name, message }) => {
       </div>
       <div className="flex">
         <div className="font-medium text-md">{name} :</div>
-        <div className="ml-2 ">{message}</div>
+        <div className="ml-2 ">{message + genrateEmoji()}</div>
       </div>
     </div>
   );
