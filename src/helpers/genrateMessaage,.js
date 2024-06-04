@@ -1,4 +1,4 @@
-function generateRandomText(numParagraphs, numSentencesPerParagraph) {
+const generateRandomText = () => {
   const words = [
     "lorem",
     "ipsum",
@@ -22,11 +22,14 @@ function generateRandomText(numParagraphs, numSentencesPerParagraph) {
   ];
   const paragraphs = [];
 
+  const numParagraphs = 1;
+  const numSentencesPerParagraph = 1;
+
   for (let p = 0; p < numParagraphs; p++) {
     const sentences = [];
 
     for (let i = 0; i < numSentencesPerParagraph; i++) {
-      const numWords = Math.floor(Math.random() * 1) + 4;
+      const numWords = Math.floor(Math.random() * 1) + 3;
       const sentenceWords = [];
 
       for (let j = 0; j < numWords; j++) {
@@ -42,7 +45,6 @@ function generateRandomText(numParagraphs, numSentencesPerParagraph) {
   }
 
   return paragraphs.join("\n\n");
-}
+};
 
-// Usage example:
-export const randomText = generateRandomText(1, 1);
+export default generateRandomText;

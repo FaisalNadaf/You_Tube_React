@@ -431,3 +431,5 @@ export const Colors = [
   "#D5DBDB",
   "#AEB6BF",
 ];
+
+export const getAvatar = "https://avatar.iran.liara.run/public/boy?username=";

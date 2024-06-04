@@ -28,13 +28,13 @@ const WatchVedio = () => {
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
           ></iframe>
-          <div className="w-1/4 border border-black p-2 my-4 h-[500px] rounded-lg overflow-scroll">
+          <div className="w-1/4 border border-black p-2 my-4 h-[500px] rounded-lg overflow-scroll  flex flex-col-reverse">
             <LiveChatCointainer />
           </div>
         </div>
       </div>
-      <div>
-        <p className="text-2xl font-bold px-4 py-2">Comment : </p>
+      <div className="max-w-5xl">
+        <p className="text-2xl  font-bold px-4 py-2">Comment : </p>
         <CommentsCointainer />
       </div>
     </div>
