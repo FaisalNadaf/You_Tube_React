@@ -10,6 +10,7 @@ import { toggleMenu } from "../redux/Slice's/appSlice";
 import { storeCache } from "../redux/Slice's/searchSlice";
 import { Link } from "react-router-dom";
 import { storeSeach } from "../redux/Slice's/storeSearch";
+import ButtonCointainer from "./ButtonCointainer";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -48,64 +49,69 @@ const Header = () => {
 
   return (
     <div className="flex flex-col sticky top-0">
-      <div className="h-16   shadow-lg border flex items-center justify-between px-4  bg-white ">
-        <div className="flex items-center justify-between px-4 w-48">
-          {!hideMenu ? (
-            <i
-              className="text-2xl  fa-solid fa-bars"
-              onClick={() => {
-                dispatch(toggleMenu());
+      <div className="h-28   shadow-lg border  px-4 py-3 bg-white  ">
+        <div className="flex items-center justify-between ">
+          <div className="flex items-center justify-between px-4 w-40">
+            {!hideMenu ? (
+              <i
+                className="text-2xl  fa-solid fa-bars"
+                onClick={() => {
+                  dispatch(toggleMenu());
+                }}
+              ></i>
+            ) : (
+              <i
+                className="text-2xl  fa-solid fa-xmark"
+                onClick={() => {
+                  dispatch(toggleMenu());
+                }}
+              ></i>
+            )}
+            <a href="/">
+              <img className="h-8 mx-2" src={YOU_TUBE_LOGO} alt="logo" />
+            </a>
+          </div>
+          <div className="w-1/2 self-center flex justify-center">
+            <input
+              type="text"
+              value={searchQuery}
+              onFocus={() => setShowSuggestion(true)}
+              onBlur={() => setShowSuggestion(false)}
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
               }}
-            ></i>
-          ) : (
-            <i
-              className="text-2xl  fa-solid fa-xmark"
-              onClick={() => {
-                dispatch(toggleMenu());
-              }}
-            ></i>
-          )}
-          <a href="/">
-            <img className="h-8 mx-2" src={YOU_TUBE_LOGO} alt="logo" />
-          </a>
-        </div>
-
-        <div className="w-1/2 self-center flex justify-center">
-          <input
-            type="text"
-            value={searchQuery}
-            onFocus={() => setShowSuggestion(true)}
-            onBlur={() => setShowSuggestion(false)}
-            onChange={(e) => {
-              setSearchQuery(e.target.value);
-            }}
-            className="border w-4/5 center rounded-l-full py-1 border-black "
-          />
-          {/* <Link to="/search"> */}
+              placeholder="Search"
+              className="border w-4/5 px-4 text-gray-700 text-xl center rounded-l-full py-1 border-black "
+            />
+            {/* <Link to="/search"> */}
             <button
               onClick={storeSearch}
-              className="rounded-r-full border border-black px-4 py-1 bg-red-500  "
+              className="rounded-r-full border border-black px-4 py-1 bg-[#FF0000]  "
             >
-              🔍
+              <i className="fa-solid fa-magnifying-glass text-white"></i>
             </button>
-          {/* </Link> */}
-          {showSuggestion && searchQuery.length > 0 && (
-            <div className="rounded-lg  shadow-lg self-center bg-white w-[37rem] absolute top-16 p-2">
-              <ul>
-                {fetchQuert.map((ele) => {
-                  return (
-                    <li className="py-1 hover:bg-gray-100 rounded" key={ele}>
-                      🔍 {ele}
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          )}
+            {/* </Link> */}
+            {showSuggestion && searchQuery.length > 0 && (
+              <div className="rounded-lg  shadow-lg self-center bg-white w-[37rem] absolute top-16 p-2">
+                <ul>
+                  {fetchQuert.map((ele) => {
+                    return (
+                      <li className="py-1 hover:bg-gray-100 rounded" key={ele}>
+                        🔍 {ele}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            )}
+          </div>
+          <div>
+            <img src={PROFILE} alt="" className="h-6 mx-2" />
+          </div>
         </div>
-
-        <div>
-          <img src={PROFILE} alt="" className="h-6 mx-2" />
+        <div className="flex items-center justify-center">
+          {" "}
+          <ButtonCointainer />
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ import LiveChatCointainer from "./LiveChatCointainer";
 const WatchVedio = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-
+  console.log(id);
   useEffect(() => {
     dispatch(closeMenu());
   }, []);
@@ -21,7 +21,7 @@ const WatchVedio = () => {
             width="1000"
             height="500"
             className="m-4 rounded"
-            src={`https://www.youtube.com/embed/${id}?`}
+            src={`https://www.youtube.com/embed/${id}`}
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

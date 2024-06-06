@@ -25,12 +25,12 @@ const VedioCointainer = () => {
     <ShimmerUi />
   ) : (
     <div className=" w-full ">
-      <ButtonCointainer />
+    
 
       <div className="flex flex-wrap items-center justify-center">
         {vedio.map((singleVedio) => {
           return (
-            <Link to={`/watch/${singleVedio.id}`} key={singleVedio.id}>
+            <Link to={`/watch/${singleVedio.id.videoId}`} key={singleVedio.id}>
               <VedioCard {...singleVedio} />
             </Link>
           );
