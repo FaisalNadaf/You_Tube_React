@@ -8,8 +8,15 @@ import LiveChatCointainer from "./LiveChatCointainer";
 const WatchVedio = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  console.log(id);
+  const fetchData = async () => {
+    const data = await fetch("https://www.youtube.com/embed/QNCKlM4Uc90");
+    const jsonData = await data.json();
+    console.log(data);
+    console.log(jsonData);
+    console.log("first");
+  };
   useEffect(() => {
+    fetchData();
     dispatch(closeMenu());
   }, []);
   return (
@@ -23,12 +30,8 @@ const WatchVedio = () => {
             className="m-4 rounded"
             src={`https://www.youtube.com/embed/${id}`}
             title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
           ></iframe>
-          <div className="w-1/4 border border-black p-2 my-4 h-[500px] rounded-lg overflow-scroll  flex flex-col-reverse">
+          <div className="w-1/4 border  p-2 border-black   my-4 h-[600px] rounded-lg overflow-scroll no-scrollbar flex flex-col-reverse  fixed right-20">
             <LiveChatCointainer />
           </div>
         </div>

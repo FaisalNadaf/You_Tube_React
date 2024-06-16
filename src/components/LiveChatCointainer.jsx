@@ -16,7 +16,7 @@ const LiveChatCointainer = () => {
           message: generateRandomText(),
         })
       );
-    }, 2000);
+    }, 1500);
     return () => {
       clearInterval(timmer);
     };
@@ -26,11 +26,7 @@ const LiveChatCointainer = () => {
   return (
     <div className="">
       {livechat.map((chat, idx) => (
-        <LiveChat
-          key={idx}
-          name={chat.name}
-          message={chat.message}
-        />
+        <LiveChat key={idx} name={chat.name} message={chat.message} />
       ))}
     </div>
   );

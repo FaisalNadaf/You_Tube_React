@@ -7,7 +7,7 @@ const Comment = ({ data }) => {
     <div className="flex  max-h-16 items-center p-2 bg-gray-100 shadow rounded flex-wrap " >
       <img src={PROFILE} alt="" className="h-8 mx-2" />
       <div>
-        <div>{name}</div>
+        <div className="font-semibold">{name}</div>
         <div>{text}</div>
       </div>
     </div>

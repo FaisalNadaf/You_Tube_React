@@ -19,19 +19,19 @@ export const GET_VIDEO_BY_SEARCH_KEY =
 export const MOCK_COMMENTS = [
   {
     name: "faisal",
-    text: "faisal is good boy good decveloperr",
+    text: "made by faisal",
     replies: [
       {
         name: "faisal",
-        text: "faisal is good boy good decveloperr",
+        text: "made by faisal",
         replies: [
           {
             name: "faisal",
-            text: "faisal is good boy good decveloperr",
+            text: "made by faisal",
             replies: [
               {
                 name: "faisal",
-                text: "faisal is good boy good decveloperr",
+                text: "made by faisal",
                 replies: [],
               },
             ],
@@ -42,55 +42,55 @@ export const MOCK_COMMENTS = [
   },
   {
     name: "faisal",
-    text: "faisal is good boy good decveloperr",
+    text: "made by faisal",
     replies: [],
   },
   {
     name: "faisal",
-    text: "faisal is good boy good decveloperr",
+    text: "made by faisal",
     replies: [],
   },
   {
     name: "faisal",
-    text: "faisal is good boy good decveloperr",
+    text: "made by faisal",
     replies: [
       {
         name: "faisal",
-        text: "faisal is good boy good decveloperr",
+        text: "made by faisal",
         replies: [],
       },
     ],
   },
   {
     name: "faisal",
-    text: "faisal is good boy good decveloperr",
+    text: "made by faisal",
     replies: [],
   },
   {
     name: "faisal",
-    text: "faisal is good boy good decveloperr",
+    text: "made by faisal",
     replies: [],
   },
   {
     name: "faisal",
-    text: "faisal is good boy good decveloperr",
+    text: "made by faisal",
     replies: [
       {
         name: "faisal",
-        text: "faisal is good boy good decveloperr",
+        text: "made by faisal",
         replies: [
           {
             name: "faisal",
-            text: "faisal is good boy good decveloperr",
+            text: "made by faisal",
             replies: [],
           },
           {
             name: "faisal",
-            text: "faisal is good boy good decveloperr",
+            text: "made by faisal",
             replies: [
               {
                 name: "faisal",
-                text: "faisal is good boy good decveloperr",
+                text: "made by faisal",
                 replies: [],
               },
             ],
@@ -101,57 +101,57 @@ export const MOCK_COMMENTS = [
   },
   {
     name: "faisal",
-    text: "faisal is good boy good decveloperr",
+    text: "made by faisal",
     replies: [
       {
         name: "faisal",
-        text: "faisal is good boy good decveloperr",
+        text: "made by faisal",
         replies: [],
       },
     ],
   },
   {
     name: "faisal",
-    text: "faisal is good boy good decveloperr",
+    text: "made by faisal",
     replies: [],
   },
   {
     name: "faisal",
-    text: "faisal is good boy good decveloperr",
+    text: "made by faisal",
     replies: [],
   },
   {
     name: "faisal",
-    text: "faisal is good boy good decveloperr",
+    text: "made by faisal",
     replies: [
       {
         name: "faisal",
-        text: "faisal is good boy good decveloperr",
+        text: "made by faisal",
         replies: [],
       },
       {
         name: "faisal",
-        text: "faisal is good boy good decveloperr",
+        text: "made by faisal",
         replies: [],
       },
       {
         name: "faisal",
-        text: "faisal is good boy good decveloperr",
+        text: "made by faisal",
         replies: [],
       },
     ],
   },
   {
     name: "faisal",
-    text: "faisal is good boy good decveloperr",
+    text: "made by faisal",
     replies: [
       {
         name: "faisal",
-        text: "faisal is good boy good decveloperr",
+        text: "made by faisal",
         replies: [
           {
             name: "faisal",
-            text: "faisal is good boy good decveloperr",
+            text: "made by faisal",
             replies: [],
           },
         ],

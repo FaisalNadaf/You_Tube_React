@@ -15,53 +15,56 @@ import ButtonCointainer from "./ButtonCointainer";
 const Header = () => {
   const dispatch = useDispatch();
   const [searchQuery, setSearchQuery] = useState("");
-  const [fetchQuert, setFetchQuert] = useState([]);
+  const [fetchQuery, setFetchQuery] = useState([]);
   const [showSuggestion, setShowSuggestion] = useState(false);
   const hideMenu = useSelector((store) => store.app.toggle);
   const cacheStore = useSelector((store) => store.cache);
-  // console.log(cacheStore[searchQuery]);
 
-  const searchSuggestion = async () => {
-    const data = await fetch(SEARCH_QUERY_API + searchQuery);
+  const searchSuggestion = async (query) => {
+    const data = await fetch(SEARCH_QUERY_API + query);
     const jsonData = await data.json();
-    setFetchQuert(jsonData[1]);
+    setFetchQuery(jsonData[1]);
     dispatch(
       storeCache({
-        [searchQuery]: jsonData[1],
+        [query]: jsonData[1],
       })
     );
   };
+
   useEffect(() => {
-    const timmer = setTimeout(() => {
-      if (cacheStore[searchQuery]) {
-        searchSuggestion(cache[searchQuery]);
-      } else {
-        searchSuggestion();
+    const timer = setTimeout(() => {
+      if (searchQuery.length > 0) {
+        if (cacheStore[searchQuery]) {
+          setFetchQuery(cacheStore[searchQuery]);
+        } else {
+          searchSuggestion(searchQuery);
+        }
       }
     }, 200);
     return () => {
-      clearTimeout(timmer);
+      clearTimeout(timer);
     };
   }, [searchQuery]);
+
   const storeSearch = () => {
     dispatch(storeSeach(searchQuery));
   };
 
   return (
     <div className="flex flex-col sticky top-0">
-      <div className="h-28   shadow-lg border  px-4 py-3 bg-white  ">
-        <div className="flex items-center justify-between ">
+      <div className="h-28 shadow-lg border px-4 py-3 bg-white">
+        <div className="flex items-center justify-between">
           <div className="flex items-center justify-between px-4 w-40">
             {!hideMenu ? (
               <i
-                className="text-2xl  fa-solid fa-bars"
+                className="text-2xl fa-solid fa-bars"
                 onClick={() => {
                   dispatch(toggleMenu());
                 }}
               ></i>
             ) : (
               <i
-                className="text-2xl  fa-solid fa-xmark"
+                className="text-2xl fa-solid fa-xmark"
                 onClick={() => {
                   dispatch(toggleMenu());
                 }}
@@ -71,7 +74,7 @@ const Header = () => {
               <img className="h-8 mx-2" src={YOU_TUBE_LOGO} alt="logo" />
             </a>
           </div>
-          <div className="w-1/2 self-center flex justify-center">
+          <div className="w-1/2 self-center flex justify-center relative">
             <input
               type="text"
               value={searchQuery}
@@ -81,27 +84,31 @@ const Header = () => {
                 setSearchQuery(e.target.value);
               }}
               placeholder="Search"
-              className="border w-4/5 px-4 text-gray-700 text-xl center rounded-l-full py-1 border-black "
+              className="border w-4/5 px-4 text-gray-700 text-xl center rounded-l-full py-1 border-black"
             />
-            {/* <Link to="/search"> */}
             <button
-              onClick={storeSearch}
-              className="rounded-r-full border border-black px-4 py-1 bg-[#FF0000]  "
+              onMouseDown={storeSearch} // Use onMouseDown to prevent blur
+              className="rounded-r-full border border-black px-4 py-1 bg-[#FF0000]"
             >
               <i className="fa-solid fa-magnifying-glass text-white"></i>
             </button>
-            {/* </Link> */}
             {showSuggestion && searchQuery.length > 0 && (
-              <div className="rounded-lg  shadow-lg self-center bg-white w-[37rem] absolute top-16 p-2">
-                <ul>
-                  {fetchQuert.map((ele) => {
-                    return (
-                      <li className="py-1 hover:bg-gray-100 rounded" key={ele}>
-                        🔍 {ele}
-                      </li>
-                    );
-                  })}
-                </ul>
+              <div className="rounded-lg shadow-lg bg-white w-[37rem] absolute top-16 p-2">
+                <div>
+                  {fetchQuery.map((ele) => (
+                    <button
+                      className="py-1 hover:bg-gray-100 rounded min-w-full"
+                      key={ele}
+                      onMouseDown={() => {
+                        setSearchQuery(ele);
+                        storeSearch();
+                      }}
+                      // Use onMouseDown to prevent blur
+                    >
+                      🔍 {ele}
+                    </button>
+                  ))}
+                </div>
               </div>
             )}
           </div>
@@ -110,7 +117,6 @@ const Header = () => {
           </div>
         </div>
         <div className="flex items-center justify-center">
-          {" "}
           <ButtonCointainer />
         </div>
       </div>

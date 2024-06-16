@@ -5,7 +5,7 @@ const VedioCard = ({ snippet }) => {
   const { channelTitle, title, publishedAt, thumbnails } = snippet;
   const date = formatDate(publishedAt);
   return (
-    <div className="w-[310px] max-h-96 border border-gray-300 rounded-lg shadoe m-2 ">
+    <div className="w-[310px] max-h-96 border border-gray-300 rounded-xl shadoe m-2 ">
       <div>
         <img
           src={thumbnails.medium.url}
