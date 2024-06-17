@@ -4,6 +4,7 @@ import {
   PROFILE,
   SEARCH_QUERY_API,
   YOU_TUBE_LOGO,
+  getAvatar,
 } from "../constant";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../redux/Slice's/appSlice";
@@ -11,6 +12,7 @@ import { storeCache } from "../redux/Slice's/searchSlice";
 import { Link } from "react-router-dom";
 import { storeSeach } from "../redux/Slice's/storeSearch";
 import ButtonCointainer from "./ButtonCointainer";
+import generateName from "../helpers/generateName";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -112,8 +114,12 @@ const Header = () => {
               </div>
             )}
           </div>
-          <div>
-            <img src={PROFILE} alt="" className="h-6 mx-2" />
+          <div className="mr-3">
+            <img
+              src={getAvatar + generateName()}
+              alt=""
+              className="h-10 border rounded-full border-black"
+            />
           </div>
         </div>
         <div className="flex items-center justify-center">

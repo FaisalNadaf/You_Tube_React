@@ -3,7 +3,7 @@ import React from "react";
 const ShimmerUi = () => {
   return (
     <div className="flex flex-wrap mt-4 p-2 ">
-      {Array(20)
+      {Array(16)
         .fill("")
         .map((x,idx) => {
           return (
