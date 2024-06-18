@@ -46,11 +46,11 @@ const WatchVedio = () => {
             src={`https://www.youtube.com/embed/${id}?autoplay=1`}
             title="YouTube video player"
           ></iframe>
-          {!hideSideBar&&
-            <div className="w-1/4 border  p-2 border-black   my-4 h-[600px] rounded-lg overflow-scroll no-scrollbar flex flex-col-reverse  fixed right-20">
+          {!hideSideBar && (
+            <div className="hidden lg-custom:block lg-custom:w-1/4 border p-2 border-black my-4 h-[600px] rounded-lg overflow-scroll no-scrollbar flex flex-col-reverse fixed right-20">
               <LiveChatCointainer />
             </div>
-          }
+          )}
         </div>
         <div className="w-[65%] h-30">
           <div className="h-10 text-2xl px-4 font-semibold">{title}</div>

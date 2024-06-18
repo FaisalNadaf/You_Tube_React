@@ -54,7 +54,7 @@ const Header = () => {
 
   return (
     <div className="flex flex-col sticky top-0">
-      <div className="h-28 shadow-lg border px-4 py-3 bg-white">
+      <div className="h-18 shadow-lg border px-4 py-3 bg-white">
         <div className="flex items-center justify-between">
           <div className="flex items-center justify-between px-4 w-40">
             {!hideMenu ? (
@@ -122,9 +122,7 @@ const Header = () => {
             />
           </div>
         </div>
-        <div className="flex items-center justify-center">
-          <ButtonCointainer />
-        </div>
+     
       </div>
     </div>
   );

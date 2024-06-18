@@ -16,8 +16,7 @@ const ButtonCointainer = () => {
     "Api",
     "Computers",
     "Uboxing",
-    "Mixis",
-    "Watched",
+
   ];
   return (
     <div className="flex">
