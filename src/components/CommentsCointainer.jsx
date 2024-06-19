@@ -9,9 +9,15 @@ const CommentsCointainer = () => {
   return (
     <div>
       {MOCK_COMMENTS.map((comment, idx) => {
-       
         return (
-          <CommentList key={idx} data={comment} Color={Colors[random_idx()]} />
+          <>
+          
+            <CommentList
+              key={idx}
+              data={comment}
+              Color={Colors[random_idx()]}
+            />
+          </>
         );
       })}
     </div>

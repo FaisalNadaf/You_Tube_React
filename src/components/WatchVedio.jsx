@@ -11,7 +11,7 @@ const WatchVedio = () => {
   const [title, setTitle] = useState("");
   const [channelTitle, setChannelTitle] = useState("");
   const hideSideBar = useSelector((store) => store.app.toggle);
-
+  const [hide, setHide] = useState(false);
 
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -35,10 +35,9 @@ const WatchVedio = () => {
     dispatch(closeMenu());
   }, []);
   return (
-    <div className="w-screen">
+    <div className="w-screen z10 h-screen">
       <div>
         <div className="flex">
-          {" "}
           <iframe
             width="1000"
             height="500"
@@ -47,13 +46,15 @@ const WatchVedio = () => {
             title="YouTube video player"
           ></iframe>
           {!hideSideBar && (
-            <div className="hidden lg-custom:block lg-custom:w-1/4 border p-2 border-black my-4 h-[600px] rounded-lg overflow-scroll no-scrollbar flex flex-col-reverse fixed right-20">
+            <div className=" lg-custom:block lg-custom:w-1/4 border p-2 border-gray-300 my-4 h-[600px] rounded-lg overflow-scroll no-scrollbar flex flex-col-reverse  fixed right-20">
               <LiveChatCointainer />
             </div>
           )}
         </div>
-        <div className="w-[65%] h-30">
-          <div className="h-10 text-2xl px-4 font-semibold">{title}</div>
+        <div className="w-[65%] hue-rotate-30">
+          <div className="h-10 text-2xl px-4 font-semibold overflow-hidden">
+            {title}
+          </div>
           <div className="flex justify-between items-center">
             <div className="flex">
               <div className="flex mx-4 items-center">
@@ -80,7 +81,7 @@ const WatchVedio = () => {
             <div className="w-1/2 flex justify-end">
               <div className="mx-1">
                 <button className="px-4 hover:bg-gray-100 border border-black py-2 rounded-l-full ">
-                  {Math.floor(Math.random() * 99)}{" "}
+                  {Math.floor(Math.random() * 99)}
                   <i className="fa-solid fa-thumbs-up"></i>
                 </button>
                 <button className="px-4 hover:bg-gray-100 border border-black py-2  rounded-r-full ">
@@ -103,10 +104,23 @@ const WatchVedio = () => {
       </div>
       <div className="max-w-5xl">
         <p className="text-2xl  font-bold px-4 py-2">
-          Comment <i className="fa-solid fa-comment"></i>{" "}
+          Comment <i className="fa-solid fa-comment"></i>
         </p>
+        <div className="flex justify-end">
+          <button
+            onClick={() => setHide(true)}
+            className="border border-gray-300  px-4 py-2 rounded-lg hover:bg-[#f7d800]"
+          >
+            Add Comment
+          </button>
+        </div>
         <CommentsCointainer />
       </div>
+      {hide && (
+        <div className="h-screen w-screen fixed flex items-center justify-center bg-gray-50 opacity-50 top-0">
+          <div className="  z-20 font-black text-9xl text-teal-500">fasd</div>
+        </div>
+      )}
     </div>
   );
 };
