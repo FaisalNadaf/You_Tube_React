@@ -4,7 +4,7 @@ import genrateEmoji from "../helpers/genrateEmoji";
 
 const LiveChat = ({ name, message }) => {
   return (
-    <div className="border flex items-center px-1 py-2 shadow border-gray-200 my-1">
+    <div className="border flex items-center max-h-12 px-1 w-full py-2 shadow border-gray-200 my-1">
       <div>
         <img src={getAvatar + name} alt="" className="h-8 mx-3" />
       </div>

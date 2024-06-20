@@ -1,27 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import CommentList from "./CommentList";
 import { Colors, MOCK_COMMENTS } from "../constant";
 
-const CommentsCointainer = () => {
+const CommentsContainer = () => {
   const random_idx = () => {
     return Math.floor(Math.random() * Colors.length);
   };
+
+  const [comments, setComments] = useState(MOCK_COMMENTS);
+
   return (
     <div>
-      {MOCK_COMMENTS.map((comment, idx) => {
-        return (
-          <>
-          
-            <CommentList
-              key={idx}
-              data={comment}
-              Color={Colors[random_idx()]}
-            />
-          </>
-        );
-      })}
+      {comments.map((comment, idx) => (
+        <CommentList
+          key={idx}
+          idx={idx}
+          data={comment}
+          Color={Colors[random_idx()]}
+          comments={comments}
+          setComments={setComments}
+        />
+      ))}
     </div>
   );
 };
 
-export default CommentsCointainer;
+export default CommentsContainer;

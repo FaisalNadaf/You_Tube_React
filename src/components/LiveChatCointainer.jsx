@@ -24,7 +24,7 @@ const LiveChatCointainer = () => {
 
   const livechat = useSelector((store) => store.chat.message);
   return (
-    <div className="flex flex-wrap flex-col-reverse ">
+    <div className="flex flex-col-reverse  overflow-y-auto h-full" >
       {livechat.map((chat, idx) => (
         <LiveChat key={idx} name={chat.name} message={chat.message} />
       ))}

@@ -24,6 +24,11 @@ export const MOCK_COMMENTS = [
       {
         name: "faisal",
         text: "made by faisal",
+        replies: [],
+      },
+      {
+        name: "faisal",
+        text: "made by faisal",
         replies: [
           {
             name: "faisal",
@@ -35,124 +40,6 @@ export const MOCK_COMMENTS = [
                 replies: [],
               },
             ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    name: "faisal",
-    text: "made by faisal",
-    replies: [],
-  },
-  {
-    name: "faisal",
-    text: "made by faisal",
-    replies: [],
-  },
-  {
-    name: "faisal",
-    text: "made by faisal",
-    replies: [
-      {
-        name: "faisal",
-        text: "made by faisal",
-        replies: [],
-      },
-    ],
-  },
-  {
-    name: "faisal",
-    text: "made by faisal",
-    replies: [],
-  },
-  {
-    name: "faisal",
-    text: "made by faisal",
-    replies: [],
-  },
-  {
-    name: "faisal",
-    text: "made by faisal",
-    replies: [
-      {
-        name: "faisal",
-        text: "made by faisal",
-        replies: [
-          {
-            name: "faisal",
-            text: "made by faisal",
-            replies: [],
-          },
-          {
-            name: "faisal",
-            text: "made by faisal",
-            replies: [
-              {
-                name: "faisal",
-                text: "made by faisal",
-                replies: [],
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    name: "faisal",
-    text: "made by faisal",
-    replies: [
-      {
-        name: "faisal",
-        text: "made by faisal",
-        replies: [],
-      },
-    ],
-  },
-  {
-    name: "faisal",
-    text: "made by faisal",
-    replies: [],
-  },
-  {
-    name: "faisal",
-    text: "made by faisal",
-    replies: [],
-  },
-  {
-    name: "faisal",
-    text: "made by faisal",
-    replies: [
-      {
-        name: "faisal",
-        text: "made by faisal",
-        replies: [],
-      },
-      {
-        name: "faisal",
-        text: "made by faisal",
-        replies: [],
-      },
-      {
-        name: "faisal",
-        text: "made by faisal",
-        replies: [],
-      },
-    ],
-  },
-  {
-    name: "faisal",
-    text: "made by faisal",
-    replies: [
-      {
-        name: "faisal",
-        text: "made by faisal",
-        replies: [
-          {
-            name: "faisal",
-            text: "made by faisal",
-            replies: [],
           },
         ],
       },

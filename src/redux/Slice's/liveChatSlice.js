@@ -10,7 +10,7 @@ const LiveChatSlice = createSlice({
       if (state.message.length > 20) {
         state.message.shift();
       }
-      state.message.push(action.payload);
+      state.message.unshift(action.payload);
     },
   },
 });
